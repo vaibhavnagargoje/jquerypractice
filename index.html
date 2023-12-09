@@ -6,20 +6,54 @@
     <title>jquery</title>
     <script src="jquery-3.7.1.min.js"></script>
     <script>
-        let a = document.querySelector("#vaibhav").innerHTML();
-        console.log(a);
+       
         $(document).ready(function(){
-            alert("i am ready to use")
-        
+            // alert("i am ready to use")
+            // var a= $("#vaibhav").html();
+            // console.log(a);
+
+            console.log("hellow");
+             var a =$('.container').html();
+             console.log(a);
+
+
+            var b=$(".box2").html();
+            console.log(b);
         })
     </script>
     <script>
             
 
     </script>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-evenly;
+            
+        }
+          .box{
+            width:250px;
+            height: 200px;
+            border:black solid 2px;
+            border-radius: 5px;
+
+          }
+          .box1{
+            background-color: pink;
+
+          }
+          .box2{
+            background-color: yellow;
+          }
+    </style>
     
 </head>
 <body>
-    <h1 id="vaibhav"> <span> hello</span> hellow vaibsdfsfhav</h1>
+    <h1> vaibhav : jquery Series</h1>
+     <div class="container">
+        <div class="box box1"> <h1> box1</h1> <p>Lorem ipsum dolor sit amet.</p> </div>
+        <div class="box box2"> <h1> box 2</h1> <p> Lorem ipsum dolor sit amet.</p></div>
+     </div>
 </body>
 </html>
