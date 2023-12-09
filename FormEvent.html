@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form event jquery </title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        #form{
+           
+            height: 900px;
+            background-color: pink;
+           text-align: center;
+
+        }
+    </style>
+</head>
+<body>
+    <h1> Form Event </h1>
+    <form action="" id="form" >
+        <label for="name">Name : </label>
+        <input type="text" id="name">
+        <br>
+        <label for="class">Class :  </label>
+        <input type="text" id="class">
+        <br>
+        <label for="region">Country:</label>
+        <select id="region" >
+            <option value="" selected disabled> select country </option>
+            <option value="India">India</option>
+            <option value="US"> US</option>
+        </select>
+        <br>
+        <input type="submit">
+
+        <div id="test"> </div>
+
+
+    </form>
+    <script>
+        $(document).ready(()=>{
+            $("#name, #class, #region").focus(()=>{
+               $("#name,#class, #region").css('background-color','lime');
+            })
+            $('#name').blur(function(){
+                $('#name').css('background-color','');
+            })
+            $('#region').change(function(){
+                $('#region').css('background-color','yellow');
+            })
+
+            $("#region").change(()=>{
+                var val= $('#region').val();
+                $('#test').html(val);
+            })
+
+            $("#name,#class").select(()=>{
+                $("#name,#class").css("background-color",'yellow')
+            })
+
+            $("#form").submit(()=>{
+                console.log("form Submmited");
+                alert("form submmited")
+            })
+        })
+        
+    </script>
+</body>
+</html>
