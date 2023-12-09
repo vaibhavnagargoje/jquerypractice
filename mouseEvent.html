@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event </title>
+    <script src="jquery-3.7.1.min.js"></script>
+    <style>
+        .container{
+            background-color: pink;
+            border: 2px dashed black;
+            text-align: center;
+            height:100px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1> Mouse event </h1>
+    <div id="box" class="container">
+        <h2> text box</h2>
+        <p> Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+    </div>
+<script>
+    $('documet').ready(function(){
+        // $('.container').dblclick(()=>{
+        //     event.stopPropagation()
+        //     $('.container h2').css('background-color','yellow')
+        //     $('.container').css('background-color','blue')
+            
+        //     let a = $('.container h2').html();
+        //     console.log(a);
+        // } );
+        $('p').contextmenu(()=>{
+            $('p').css('color','green');
+            $('.container').css('color',"red")
+        })
+
+        $('.container').mouseenter(()=>{
+            $('.container').css("background-color",'brown')
+        });
+
+        $(".container").hover(()=>{
+            $('.container').css('border','3px blue solid')
+            
+        });
+        $(".container").mouseleave(function(){
+        $('.container').css('background-color','yellow').css('border','none')
+        });
+    })
+</script>
+</body>
+</html>
