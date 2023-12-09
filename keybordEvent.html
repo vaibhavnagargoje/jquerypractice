@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>keybord event</title>
+    <style>
+        
+    </style>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <h1> jQuery keybord events  </h1>
+    <div class="container">
+        <h2> Test Box   </h2>
+        <p> Lorem ipsum dolor sit amet.</p>
+    </div>
+
+    <script>
+        $(document).ready(function(){
+            $('.container').css('border','2px black solid').css('height','100px').css('background-color','pink')
+
+            $('body').keypress(()=>{
+                $('body').css('background-color','green');
+            });
+            $('body').keyup(()=>{
+                $('body').css('background-color','yellow')
+            })
+        });
+    </script>
+</body>
+</html>
